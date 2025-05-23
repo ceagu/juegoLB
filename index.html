@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafío para Tía</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #image, #video-container {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      cursor: pointer;
+      width: 300px;
+    }
+    video {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    #congrats {
+      font-size: 1.5em;
+      color: #2b9348;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resuelve este desafío:</h1>
+  <p><strong>1919365 ÷ 5</strong></p>
+
+  <input type="number" id="answer" placeholder="Tu respuesta">
+  <button onclick="checkAnswer()">Enviar</button>
+
+  <div id="image">
+    <p>¡Respuesta correcta! Haz clic en la imagen:</p>
+    <img src="imagen1.jpg" alt="Imagen de premio" onclick="showVideo()">
+  </div>
+
+  <div id="video-container">
+    <p id="congrats">¡Felicidades, Tía!</p>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById('answer').value;
+      if (parseInt(input) === 383873) {
+        document.getElementById('image').style.display = 'block';
+      } else {
+        alert("Respuesta incorrecta. Intenta de nuevo.");
+      }
+    }
+
+    function showVideo() {
+      document.getElementById('video-container').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
