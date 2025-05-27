@@ -47,6 +47,17 @@
       color: #444; /* Un gris oscuro elegante */
       margin: 10px 0;
     }
+    .mensaje-secuencial 
+    {
+      display: none;
+      transition: opacity 0.5s ease-in;
+      opacity: 0;
+    }
+    .mensaje-secuencial.visible 
+    {
+      display: block;
+     opacity: 1;
+    }
     #congrats 
     {
       font-size: 4em;
@@ -66,14 +77,14 @@
   <button onclick="checkAnswer()">Enviar</button>
 
   <div id="image">
-  </p><p class="mensaje-grande">¡Respuesta correcta!</p></p>
-    <p class="mensaje-grande">¿Ya te diste cuenta?</p>
-    <p class="mensaje-grande">Uhh... ¿En serio todavía no lo sacaste?</p>
-    <p class="mensaje-grande" >Voltea el celu</p>
-    <p class="mensaje-grande">Ufa... ¿sigues sin saber?</p>
-    <p class="mensaje-grande">Bueno...</p>
-    <p class="mensaje-grande">Haz clic en la imagen:</p>
-    <img src="imagen1.jpg" alt="Imagen de premio" onclick="showVideo()">
+  <p class="mensaje-secuencial mensaje-grande">¡Respuesta correcta!</p>
+  <p class="mensaje-secuencial mensaje-grande">¿Ya te diste cuenta?</p>
+  <p class="mensaje-secuencial mensaje-grande">Uhh... ¿En serio todavía no lo sacaste?</p>
+  <p class="mensaje-secuencial mensaje-grande">Voltea el celu</p>
+  <p class="mensaje-secuencial mensaje-grande">Ufa... ¿sigues sin saber?</p>
+  <p class="mensaje-secuencial mensaje-grande">Bueno...</p>
+  <p class="mensaje-secuencial mensaje-grande">Haz clic en la imagen:</p>
+  <img src="imagen1.jpg" alt="Imagen de premio" onclick="showVideo()">
   </div>
 
   <div id="video-container">
