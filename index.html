@@ -47,6 +47,16 @@
       color: #444; /* Un gris oscuro elegante */
       margin: 10px 0;
     }
+    .mensaje-secuencial {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    .mensaje-secuencial.visible {
+      display: block;
+      opacity: 1;
+    }
     
     #congrats 
     {
