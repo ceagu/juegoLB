@@ -7,16 +7,16 @@
     body {
       font-family: sans-serif;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 100px;
     }
     .titulo {
-      font-size: 4em;
+      font-size: 3em;
       font-weight: bold;
-      color: #ff8620; /*naranja*/
-      margin-bottom: 10px;
+      color: #e63946;
+      margin-bottom: 20px;
     }
     .equation {
-      font-size: 4em;
+      font-size: 3em;
     }
     input[type="number"] {
       font-size: 3em;
@@ -31,7 +31,7 @@
     }
     #image, #video-container {
       display: none;
-      margin-top: 30px;
+      margin-top: 100px;
     }
     img {
       cursor: pointer;
@@ -40,65 +40,53 @@
     video {
       width: 100%;
       max-width: 500px;
-      margin-top: 10px;
+      margin-top: 20px;
     }
     .mensaje-grande {
-      font-size: 3em;
+      font-size: 2em;
       font-weight: bold;
       font-style: italic;
-      color: #2097ff; /* celeste el nego es #444*/
-      margin: 20px 0;
+      color: #444;
+      margin: 10px 0;
     }
     .mensaje-secuencial {
       display: none;
       opacity: 0;
-      transition: opacity 3s ease-in;
+      transition: opacity 0.5s ease-in;
     }
     .mensaje-secuencial.visible {
       display: block;
       opacity: 1;
     }
-    #congrats1 {
-      font-size: 4em;
-      color: #19c6b9; /*verde esperalda*/
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      margin-bottom: 10px;
-    }
-    
     #congrats {
       font-size: 4em;
-      color: #e8378c; /*rosa*/
+      color: #e63946;
       font-weight: bold;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1 class="titulo">Resuelve este desafío: 😉</h1>
-
+  <h1 class="titulo">Resuelve este desafío:</h1>
   <p class="equation"><strong>1919365 ÷ 5</strong></p>
-  
   <input type="number" id="answer" placeholder="Tu respuesta">
   <button onclick="checkAnswer()">Enviar</button>
 
   <div id="image">
-    <p id="congrats1"class="mensaje-secuencial mensaje-grande mensaje-grande">🥳¡Respuesta correcta!🥳</p>
-
+    <p class="mensaje-secuencial mensaje-grande">¡Respuesta correcta!</p>
     <p class="mensaje-secuencial mensaje-grande">¿Ya te diste cuenta?</p>
-    <p class="mensaje-secuencial mensaje-grande">Uhh... ¿En serio todavía no lo sacaste? 🫣</p>
+    <p class="mensaje-secuencial mensaje-grande">Uhh... ¿En serio todavía no lo sacaste?</p>
     <p class="mensaje-secuencial mensaje-grande">Voltea el celu</p>
-    <p class="mensaje-secuencial mensaje-grande">Ufa... ¿sigues sin saber? 🤦🏼‍♀️</p>
+    <p class="mensaje-secuencial mensaje-grande">Ufa... ¿sigues sin saber?</p>
     <p class="mensaje-secuencial mensaje-grande">Bueno...</p>
-    <p class="mensaje-secuencial mensaje-grande">Haz clic en la imagen y desliza hacia abajo:</p>
+    <p class="mensaje-secuencial mensaje-grande">Haz clic en la imagen:</p>
     <img src="imagen1.jpg" alt="Imagen de premio" onclick="showVideo()">
   </div>
 
   <div id="video-container">
-    <p id="congrats">💕💕¡Felicidades, Tía! 💕💕</p>
-    <p id="congrats">¡Pronto podrás conocerme!🥰</p>
+    <p id="congrats">¡Felicidades, Tía!</p>
     <video controls>
       <source src="video.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de video.
@@ -126,11 +114,11 @@
     }
 
     function showVideo() {
-      document.getElementById('video-container').style.display = 'block';
+      const videoContainer = document.getElementById('video-container');
+      videoContainer.style.display = 'block';
+      videoContainer.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 
-</body>
-</html>
 </body>
 </html>
