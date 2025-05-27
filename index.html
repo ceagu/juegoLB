@@ -100,9 +100,19 @@
       const input = document.getElementById('answer').value;
       if (parseInt(input) === 383873) {
         document.getElementById('image').style.display = 'block';
+        mostrarMensajesSecuenciales();
       } else {
         alert("Respuesta incorrecta. Intenta de nuevo.");
       }
+    }
+
+    function mostrarMensajesSecuenciales() {
+      const mensajes = document.querySelectorAll('.mensaje-secuencial');
+      mensajes.forEach((msg, i) => {
+        setTimeout(() => {
+          msg.classList.add('visible');
+        }, i * 1500);
+      });
     }
 
     function showVideo() {
