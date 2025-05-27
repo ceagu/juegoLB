@@ -5,112 +5,46 @@
   <title>Desafío</title>
   <style>
     body {
-
-    font-family: sans-serif;
-
-    text-align: center;
-
-    margin-top: 500px;
-
-  }
-
-
-
-  .equation {
-
-    font-size: 2em; /* Aumenta el tamaño del texto de la ecuación */
-
-  }
-
-
-
-  input[type="number"] {
-
-    font-size: 1.5em; /* Tamaño del texto dentro del input */
-
-    padding: 10px;
-
-    width: 200px;
-
-  }
-
-
-
-  button {
-
-    font-size: 5em;
-
-    padding: 10px 20px;
-
-    margin-left: 10px;
-
-    cursor: pointer;
-
-  }
-
-
-
-  #image, #video-container {
-
-    display: none;
-
-    margin-top: 50px;
-
-  }
-
-
-
-  img {
-
-    cursor: pointer;
-
-    width: 300px;
-
-  }
-
-
-
-  video {
-
-    width: 100%;
-
-    max-width: 500px;
-
-    margin-top: 20px;
-
-  }
-
-
-
-  #congrats {
-
-    font-size: 3em;
-
-    color: #2b9348;
-
-    margin-bottom: 10px;
-
-  }
-
-</style>
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 500px;
+    }
+    #image, #video-container {
+      display: none;
+      margin-top: 50px;
+    }
+    img {
+      cursor: pointer;
+      width: 300px;
+    }
+    video {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    #congrats {
+      font-size: 3em;
+      color: #2b9348;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 
   <h1>Resuelve este desafío:</h1>
-  <p class="equation"><strong>1919365 ÷ 5</strong></p>
-
+  <p><strong>1919365 ÷ 5</strong></p>
 
   <input type="number" id="answer" placeholder="Tu respuesta">
   <button onclick="checkAnswer()">Enviar</button>
 
   <div id="image">
     <p>¡Respuesta correcta!</p>
-   </p></p>Ya te diste cuenta?</p></p>
-    </p>Uhh...En serio todavia no lo sacaste?
-    </p>Voltea el celu</p>
-    </p>Ufa.. sigues sin saber??</p>
-    </p>Bueno...</p>
-    </p>Haz clic en la imagen:</p>
+    <p>¿Ya te diste cuenta?</p>
+    <p>Uhh... ¿En serio todavía no lo sacaste?</p>
+    <p>Voltea el celu</p>
+    <p>Ufa... ¿sigues sin saber?</p>
+    <p>Bueno...</p>
+    <p>Haz clic en la imagen:</p>
     <img src="imagen1.jpg" alt="Imagen de premio" onclick="showVideo()">
   </div>
 
