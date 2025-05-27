@@ -88,7 +88,7 @@
   <button onclick="checkAnswer()">Enviar</button>
 
   <div id="image">
-    <p class="mensaje-secuencial mensaje-grande">¡Respuesta correcta!</p>
+    <p class="mensaje-grande">¡Respuesta correcta!</p>
     <p class="mensaje-secuencial mensaje-grande">¿Ya te diste cuenta?</p>
     <p class="mensaje-secuencial mensaje-grande">Uhh... ¿En serio todavía no lo sacaste?</p>
     <p class="mensaje-secuencial mensaje-grande">Voltea el celu</p>
@@ -120,7 +120,7 @@
     function mostrarMensajesSecuenciales() {
       const mensajes = document.querySelectorAll('.mensaje-secuencial');
       mensajes.forEach((msg, i) => {
-        setTimeout(1) => {
+        setTimeout()) => {
           msg.classList.add('visible');
         }, i * 1500);
       });
