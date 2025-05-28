@@ -98,13 +98,11 @@ k<!DOCTYPE html>
     <p id="congrats">¡Pronto podrás conocerme!🥰</p>
     <p>(reproduce el video)</p>
     
-    <video controls>
-      <source src="video.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-  </div>
-
-
+  <video id="video" controls autoplay muted>
+    <source src="video.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+    </div>
   <script>
     function checkAnswer() {
       const input = document.getElementById('answer').value;
@@ -124,12 +122,14 @@ k<!DOCTYPE html>
       });
 
     }
+}
 function showVideo() {
   const videoContainer = document.getElementById('video-container');
+  const video = document.getElementById('video');
   videoContainer.style.display = 'block';
   videoContainer.scrollIntoView({ behavior: 'smooth' });
+  video.play(); // Fuerza la reproducción (si está silenciado)
 }
-
   </script>
 </body>
 </html>
