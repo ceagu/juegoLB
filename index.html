@@ -104,7 +104,35 @@ k<!DOCTYPE html>
   </video>
     </div>
   <script>
-  
+    <script>
+    function checkAnswer() {
+      const input = document.getElementById('answer').value;
+      if (parseInt(input) === 383873) {
+        document.getElementById('image').style.display = 'block';
+        mostrarMensajesSecuenciales();
+      } else {
+        alert("Respuesta incorrecta. Intenta de nuevo.");
+      }
+    }
+
+    function mostrarMensajesSecuenciales() {
+      const mensajes = document.querySelectorAll('.mensaje-secuencial');
+      mensajes.forEach((msg, i) => {
+        setTimeout(() => {
+          msg.classList.add('visible');
+        }, i * 1500);
+      });
+    }
+
+    function showVideo() {
+      const videoContainer = document.getElementById('video-container');
+      videoContainer.style.display = 'block';
+      videoContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
     function checkAnswer() {
       const input = document.getElementById('answer').value;
       if (parseInt(input) === 383873) {
@@ -131,8 +159,6 @@ function showVideo() {
   videoContainer.scrollIntoView({ behavior: 'smooth' });
   video.play(); // Fuerza la reproducción (si está silenciado)
 }
-  </script>
-</body>
-</html>
+  
 
 
